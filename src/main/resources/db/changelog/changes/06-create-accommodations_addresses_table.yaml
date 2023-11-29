@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-accommodations_addresses_table.yaml
+      author: AnastasiiaMetelska
+      changes:
+        - createTable:
+            tableName: accommodations_addresses
+            columns:
+              - column:
+                  name: accommodation_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: address_id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    nullable: false
