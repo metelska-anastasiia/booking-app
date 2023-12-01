@@ -33,14 +33,9 @@ databaseChangeLog:
                   type: varchar(255)
               - column:
                   name: zip_code
-                  type: bigint
+                  type: integer
                   constraints:
                     nullable: false
-              - column:
-                  name: accommodation_id
-                  type: bigint
-                  constraints:
-                    nullable: true
               - column:
                   name: is_deleted
                   type: boolean

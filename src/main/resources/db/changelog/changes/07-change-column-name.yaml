@@ -1,9 +1,0 @@
-databaseChangeLog:
-  - changeSet:
-      id: change_column_type
-      author: AnastasiiaMetelska
-      changes:
-        - modifyDataType:
-            tableName: addresses
-            columnName: zip_code
-            newDataType: integer

@@ -1,5 +1,6 @@
 package mate.academy.bookingapp.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
@@ -11,7 +12,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Min;
@@ -38,10 +38,8 @@ public class Accommodation {
     @Column(unique = true)
     @Enumerated(value = EnumType.STRING)
     private Type type;
-    @OneToOne
-    @JoinTable(name = "accommodations_addresses",
-            joinColumns = @JoinColumn(name = "accommodation_id"),
-            inverseJoinColumns = @JoinColumn(name = "address_id"))
+    @OneToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "address_id")
     private Address address;
     @NotNull(message = "Size cannot by null")
     private String size;

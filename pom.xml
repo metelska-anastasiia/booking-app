@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>online-book-store</artifactId>
+    <artifactId>booking-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>online-book-store</name>
     <description>online-book-store</description>
@@ -47,10 +47,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-docker-compose</artifactId>
-        </dependency>
+
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -127,11 +124,6 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>jakarta.validation</groupId>
-            <artifactId>jakarta.validation-api</artifactId>
-            <version>2.0.2</version>
         </dependency>
         <dependency>
             <groupId>jakarta.validation</groupId>
