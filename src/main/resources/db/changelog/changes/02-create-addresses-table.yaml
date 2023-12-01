@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-addresses-table
+      author: AnastasiiaMetelska
+      changes:
+        - createTable:
+            tableName: addresses
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: country
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: city
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: first_address_line
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: second_address_line
+                  type: varchar(255)
+              - column:
+                  name: zip_code
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_deleted
+                  type: boolean
+                  defaultValueBoolean: false
+                  constraints:
+                    nullable: false

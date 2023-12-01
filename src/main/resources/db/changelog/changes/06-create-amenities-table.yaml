@@ -1,0 +1,18 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-amenities-table
+      author: AnastasiiaMetelska
+      changes:
+        - createTable:
+            tableName: amenities
+            columns:
+              - column:
+                  name: accommodation_id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: amenities
+                  type: VARCHAR(255)
+                  constraints:
+                    primaryKey: true
